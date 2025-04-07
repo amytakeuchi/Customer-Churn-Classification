@@ -6,6 +6,14 @@ This project develops classification algorithms to predict Telco Customer Churn
 This project follows the following Table of Contents:
 - 1. Project Setup & Data Preparation
   2. Exploratory Data Analysis (EDA)
+  3. Initial Data Preprocessing
+  4. Data Splitting
+  5. Advanced Preprocessing (Training Data Only)
+  6. Feature Engineering & Selection (Training Data Only)
+  7. Model Building & Evaluation
+  8. Model Optimization
+  9. Test Set Evaluation
+  10. Deployment Preparation
 
 # 1. Project Setup & Data Preparation
 
@@ -30,25 +38,25 @@ This project follows the following Table of Contents:
   - Point-biserial correlation for numerical-categorical relationships
 
 
-##### 3. Initial Data Preprocessing
+# 3. Initial Data Preprocessing
 
 - Handle missing values
 - Outlier detection and treatment
 - Feature encoding (categorical to numerical)
     - Convert categorical variables for further analysis
 
-##### 4. Data Splitting
+# 4. Data Splitting
 
 - Split data into train-test-validation sets
 - Ensure proper stratification for the target variable
 
-##### 5. Advanced Preprocessing (Training Data Only)
+# 5. Advanced Preprocessing (Training Data Only)
 
 - Class imbalance assessment
 - Oversampling/undersampling techniques for handling imbalance
 - Feature scaling
 
-##### 6. Feature Engineering & Selection (Training Data Only)
+# 6. Feature Engineering & Selection (Training Data Only)
 
 - Create interaction features if needed
 - Multicollinearity assessment:
@@ -62,25 +70,25 @@ This project follows the following Table of Contents:
 - Dimensionality reduction if necessary (PCA)
 - Select optimal feature subset
 
-##### 7. Model Building & Evaluation
+# 7. Model Building & Evaluation
 
 - Baseline model implementation
 - Model comparison (Logistic Regression, Random Forest, XGBoost, etc.)
 - Cross-validation of best performers
 - Apply same transformations to validation data
 
-##### 8. Model Optimization
+# 8. Model Optimization
 
 - Hyperparameter tuning of best model
 - Threshold optimization
 - Final model evaluation (confusion matrix, ROC-AUC, precision-recall)
 
-##### 9. Test Set Evaluation
+# 9. Test Set Evaluation
 
 - Apply all preprocessing and transformations to test set
 - Evaluate final model performance on unseen data
 
-##### 10. Deployment Preparation
+# 10. Deployment Preparation
 
 - Model serialization (saving)
 - Interpretation of results & business insights

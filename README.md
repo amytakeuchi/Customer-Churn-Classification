@@ -4,13 +4,16 @@ This project develops classification algorithms to predict Telco Customer Churn
 
 # TOC:
 This project follows the following Table of Contents:
-##### 1. Project Setup & Data Preparation
+- 1. Project Setup & Data Preparation
+  2. Exploratory Data Analysis (EDA)
+
+# 1. Project Setup & Data Preparation
 
 - Dataset introduction & business context
 - Import libraries and load data
 - Quick data summary (shape, types, missing values)
 
-##### 2. Exploratory Data Analysis (EDA)
+# 2. Exploratory Data Analysis (EDA)
 
 - Basic statistics and distribution analysis
 - Check distribution of continuous variables

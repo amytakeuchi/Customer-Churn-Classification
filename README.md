@@ -53,10 +53,10 @@ Trained a baseline Logistic Regression model without tuning for reference
 
 ## Hyperparameter Tuning & Model Comparison
 - Used GridSearchCV with cross-validation to train and tune:
-✅ Logistic Regression (liblinear, C, penalty)
-🌲 Random Forest (n_estimators, max_depth, min_samples_split, min_samples_leaf)
-⚡ XGBoost (max_depth, learning_rate, subsample, colsample_bytree)
-🎯 AdaBoost (n_estimators, learning_rate)
+  - ✅ Logistic Regression (liblinear, C, penalty)
+  - 🌲 Random Forest (n_estimators, max_depth, min_samples_split, min_samples_leaf)
+  - ⚡ XGBoost (max_depth, learning_rate, subsample, colsample_bytree)
+  - 🎯 AdaBoost (n_estimators, learning_rate)
 
 ## 📈 Model Evaluation
 Evaluated each model using:
@@ -67,10 +67,14 @@ Evaluated each model using:
 - AUC (ROC Curve)
 - Confusion Matrix
 
+<br/>
+  As a result of model evaluation, Logistic Regression model was identified as the most efffective model for Churn prediction for this project.
+<br/>
 ## Feature Importance Analysis
 - Extracted feature importances from:
   - Random Forest (Gini importance)
   - XGBoost (gain-based importance)
+  - AdaBoost
 - Interpreted the most influential features in churn prediction
 
 

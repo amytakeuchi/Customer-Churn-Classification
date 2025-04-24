@@ -106,6 +106,8 @@ Evaluated each model using:
 
 ### Cross-Validation Approach
 - Implemented GridSearchCV for systematic hyperparameter tuning with stratified 5-fold cross-validation
+- GridSearchCV systematically searches through a specified parameter grid to find the optimal model configuration. For this churn prediction project, GridSearchCV tested all possible combinations of hyperparameters (e.g., regularization strength, tree depth, learning rate) and automatically selected the best performing parameter set based on our prioritized evaluation metrics.
+
 - Stratification maintained class distribution across folds, ensuring consistent representation of churners in all training/validation sets
 - Cross-validation prevented overfitting to training data while enabling robust performance comparison between models
 - Comprehensive grid search explored 150+ hyperparameter combinations across all models to identify optimal configurations

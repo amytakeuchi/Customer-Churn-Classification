@@ -98,6 +98,22 @@ Evaluated each model using:
 - AUC (ROC Curve)
 - Confusion Matrix
 
+### Metric Prioritization
+- **Recall (Sensitivity)**: Prioritized to maximize identification of potential churners, ensuring minimal missed opportunities for retention efforts
+- **F1 Score**: Used as primary comparison metric between models, balancing precision and recall for optimal intervention efficiency
+- **AUC-ROC**: Selected as threshold-independent performance indicator to evaluate model discrimination ability across all possible classification thresholds
+- **Accuracy**: Considered but de-emphasized due to class imbalance in churn data (only ~27% customers churn)
+
+### Cross-Validation Approach
+- Implemented GridSearchCV for systematic hyperparameter tuning with stratified 5-fold cross-validation
+- Stratification maintained class distribution across folds, ensuring consistent representation of churners in all training/validation sets
+- Cross-validation prevented overfitting to training data while enabling robust performance comparison between models
+- Comprehensive grid search explored 150+ hyperparameter combinations across all models to identify optimal configurations
+
+### Business Impact Focus
+- Optimized for a balance between catching potential churners (recall) and intervention cost-effectiveness (precision)
+- Model configuration selected to maximize retention ROI based on estimated $200 customer retention cost vs. $1,500 lifetime value
+
 <br/>
   As a result of model evaluation, Logistic Regression model was identified as the most efffective model for Churn prediction for this project.
 <br/>

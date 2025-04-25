@@ -2,7 +2,17 @@
 ## Project Overview
 This project aims to predict customer churn using various classification models. The end-to-end pipeline includes data preprocessing, exploratory data analysis (EDA), feature engineering, class imbalance handling, model training, hyperparameter tuning, and evaluation.
 
-[Setup & Library Installation](#-setup-&-library-installation)
+- [Setup & Library Installation](#setup--library-installation)
+- [Data Preprocessing](#data-preprocessing)
+- [Exploratory Data Analysis (EDA)](#-exploratory-data-analysis-eda)
+- [Feature Assessment](#feature-assessment)
+- [Feature Engineering](#-feature-engineering)
+- [Train/Test/Validation Split](#-traintestvalidation-split)
+- [Handling Class Imbalance](#handling-class-imbalance)
+- [Modeling and Baseline](#modeling-and-baseline)
+- [Hyperparameter Tuning & Model Comparison](#hyperparameter-tuning--model-comparison)
+- [📈 Model Evaluation](#-model-evaluation)
+- [Business Impact Focus](#business-impact-focus)
 
 ## Setup & Library Installation
 Installed essential libraries for:
@@ -17,7 +27,7 @@ Installed essential libraries for:
 - Converted data types (e.g., TotalCharges to float)
 - Cleaned categorical strings (e.g., stripped whitespaces, unified values)
 
-## 📊 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 - Analyzed class distribution of the target variable Churn
 - Explored relationships between churn and features using:
   - Count plots
@@ -32,7 +42,7 @@ Installed essential libraries for:
 - Evaluated numerical features for skewness and scaling needs
 - Performed multicollinearity checks using Variance Inflation Factor (VIF)
 
-## 🧠 Feature Engineering
+## Feature Engineering
 - Created meaningful derived features such as:
   - new_num_of_services
   - new_automatic_payment
@@ -40,7 +50,7 @@ Installed essential libraries for:
   - Tenure-based categories like new_tenure_year_0-1 Year
 - Removed multicollinear and redundant features after VIF analysis
 
-## 📂 Train/Test/Validation Split
+## Train/Test/Validation Split
 - Performed stratified splitting to maintain churn ratio in all sets
 - Split data into:
   - Training set

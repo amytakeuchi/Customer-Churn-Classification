@@ -49,39 +49,34 @@ Installed essential libraries for:
 - Applied SMOTE oversampling on training data to balance churn and non-churn classes
 
 ## Modeling and Baseline
-Trained a baseline Logistic Regression model without tuning for reference
+Trained a baseline Logistic Regression model without tuning for reference.
 
 ## Hyperparameter Tuning & Model Comparison
 - Used GridSearchCV with cross-validation to train and tune:
-  - ✅ Logistic Regression (liblinear, C, penalty)
-  - 🌲 Random Forest (n_estimators, max_depth, min_samples_split, min_samples_leaf)
-  - ⚡ XGBoost (max_depth, learning_rate, subsample, colsample_bytree)
-  - 🎯 AdaBoost (n_estimators, learning_rate)
-### Model Selection Rationale
+For this customer churn prediction project, I strategically selected four complementary classification algorithms, each chosen for specific strengths. <br/>
+Also, I used GridSearchCV with cross-validation to train and tune.
 
-For this customer churn prediction project, I strategically selected four complementary classification algorithms, each chosen for specific strengths:
-
-#### Logistic Regression
+#### Logistic Regression (liblinear, C, penalty)
 - Serves as an interpretable baseline with coefficients directly showing how each feature influences churn probability
 - Provides well-calibrated probability scores for flexible threshold adjustment based on business needs (e.g., prioritizing retention of high-value customers)
 - Offers regularization options to prevent overfitting when working with numerous customer features
 - Enables straightforward communication of churn drivers to business stakeholders
 
-#### Random Forest
+#### Random Forest (n_estimators, max_depth, min_samples_split, min_samples_leaf)
 - Captures complex non-linear relationships between customer attributes that simple models might miss
 - Performs well without feature scaling, reducing preprocessing requirements for production deployment
 - Shows resilience to outliers in customer behavior data
 - Provides built-in feature importance measures to identify key churn indicators
 - Handles interaction effects between features (e.g., how contract type and tenure jointly affect churn)
 
-#### XGBoost
+#### XGBoost (max_depth, learning_rate, subsample, colsample_bytree)
 - Delivers state-of-the-art performance on structured customer data through gradient boosting
 - Efficiently handles missing values common in customer datasets without requiring imputation
 - Implements built-in regularization to prevent overfitting on training data
 - Excels at identifying subtle patterns in customer behavior leading to churn
 - Optimizes computational resources through parallelization for faster training and iteration
 
-#### AdaBoost
+#### AdaBoost (n_estimators, learning_rate)
 - Focuses sequentially on hard-to-classify customer segments that other models might miss
 - Addresses class imbalance through its weighted sample approach (important for churn datasets where churners are typically the minority class)
 - Provides complementary insights to other ensemble methods by identifying different patterns

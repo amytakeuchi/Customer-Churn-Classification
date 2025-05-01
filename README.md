@@ -100,14 +100,14 @@ This combination of models creates a robust approach that balances interpretabil
 Evaluated each model using:
 - Accuracy
 - Precision
-- Recall
+- Recall (Sensitivity)
 - F1 Score
 - AUC (ROC Curve)
 - Confusion Matrix
 
-### Metric Prioritization
-- **Recall (Sensitivity)**: Prioritized to maximize identification of potential churners, ensuring minimal missed opportunities for retention efforts
+### I prioritized the Metrics in the following order:
 - **F1 Score**: Used as primary comparison metric between models, balancing precision and recall for optimal intervention efficiency
+- **Recall (Sensitivity)**: Prioritized to maximize identification of potential churners, ensuring minimal missed opportunities for retention efforts
 - **AUC-ROC**: Selected as threshold-independent performance indicator to evaluate model discrimination ability across all possible classification thresholds
 - **Accuracy**: Considered but de-emphasized due to class imbalance in churn data (only ~27% customers churn)
 

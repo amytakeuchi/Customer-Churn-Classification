@@ -52,7 +52,7 @@
 - Incentivize longer-term contracts.
 - Promote value-added services (security, tech support) to reduce churn risk.
 
-*📔  *See full [EDA notebook](Cmain/Churn%201.%20EDA.ipynb) for plots and detailed tests.*
+📔  *See full [EDA notebook](Cmain//telecom_churn_EDA.ipynb) for plots and detailed tests.*
 
 ## 📈 Modeling Workflow
 - **Data Prep:** Cleaned types, imputed missing, dropped irrelevant features.
@@ -62,21 +62,17 @@
 - **Model Comparison:** Tuned & tested Random Forest, XGBoost, SVM, KNN, AdaBoost.
 - **Evaluation Metrics:** Accuracy, Precision, Recall, F1, ROC AUC.
 
+I prioritized the Metrics in the following order:
+- * F1 Score: Used as primary comparison metric between models, balancing precision and recall for optimal intervention efficiency
+- * Recall (Sensitivity): Prioritized to maximize identification of potential churners, ensuring minimal missed opportunities for retention efforts
+- * AUC-ROC: Selected as threshold-independent performance indicator to evaluate model discrimination ability across all possible classification thresholds
+- * Accuracy: Considered but de-emphasized due to class imbalance in churn data (only ~27% customers churn)
+Cross-Validation Approach
+
 ## 📊 Results
 - Logistic Regression outperformed others with AUC 0.84.
 - Feature importance analysis (RF, XGBoost, AdaBoost) confirmed:
 - Tenure, contract type, and bundled services drive churn prediction.
-
-📂 Project Structure
-├── notebooks/
-│   ├── telecom_churn_EDA.ipynb          # Exploratory analysis
-│   └── telecom_churn_modeling.ipynb     # Full modeling workflow
-├── data/
-│   └── churn.csv
-├── outputs/
-│   ├── model_comparison_gridsearch.png
-│   └── roc_curves_all_models.png
-└── README.md
 
 ## 🚀 Next Steps
 - Deploy best model via FastAPI/Flask.

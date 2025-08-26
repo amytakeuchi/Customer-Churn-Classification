@@ -1,8 +1,8 @@
 # 📊 Telecom Churn Classification
 
-Goal: Predict customer churn for a telecom dataset using statistical analysis, feature engineering, and machine learning models.
+**Goal: Predict customer churn for a telecom dataset using statistical analysis, feature engineering, and machine learning models.**
 
-# 🔑 Highlights
+## Highlights
 
 **Statistics & Math**
 - Chi-square, ANOVA, correlation analysis for feature relevance.
@@ -10,72 +10,49 @@ Goal: Predict customer churn for a telecom dataset using statistical analysis, f
 - Addressed multicollinearity and validated significance tests.
 
 **Feature Engineering**
+- Domain-inspired features (e.g., tenure buckets, payment type flags, service intensity).
+- Ratio-based features (avg charges, service fees per product).
+- Reduced noise via rigorous statistical testing.
 
-Domain-inspired features (e.g., tenure buckets, payment type flags, service intensity).
+**ML Pipeline**
+- Train/Validation/Test split with stratification.
+- SMOTE to correct churn imbalance (26.5% positive class).
+- GridSearchCV hyperparameter tuning.
+- Compared Logistic Regression, Random Forest, XGBoost, SVM, KNN, AdaBoost.
 
-Ratio-based features (avg charges, service fees per product).
+**Results**
+- Best model: Logistic Regression (AUC = 0.84, F1 = 0.63, Accuracy = 0.81).
+- Balances interpretability with performance.
 
-Reduced noise via rigorous statistical testing.
+## Exploratory Data Analysis (EDA) — Key Insights
 
-ML Pipeline
+**Data Cleaning*
+- Found hidden nulls in TotalCharges (blank spaces not detected by .isnull()).
+- Converted to float & imputed → ensured valid numerical analysis.
 
-Train/Validation/Test split with stratification.
+**Churn Distribution**
+- 73% stayed vs 27% churned → clear imbalance, later addressed with SMOTE.
 
-SMOTE to correct churn imbalance (26.5% positive class).
+**Continuous Features**
+- Churned customers: shorter tenure (~18 vs 38 months), lower total spend, but higher monthly charges.
+- Non-normal distributions confirmed via KDE & Q-Q plots.
 
-GridSearchCV hyperparameter tuning.
+**Categorical Features**
+- Contract: Month-to-month customers churn far more than 1–2 year contracts.
+- Payment Method: Electronic check customers churn disproportionately.
+- Services: Lack of Online Security, Backup, or Tech Support = higher churn.
+- Demographics: Senior citizens, no partner, no dependents → higher churn risk.
 
-Compared Logistic Regression, Random Forest, XGBoost, SVM, KNN, AdaBoost.
+**Interactions**
+- High monthly charges raise churn risk across all contract types.
+- Customers with bundled services churn less → service stickiness effect.
 
-Results
+**Business Takeaways**
+- Retention campaigns should target early-tenure, high-charge customers.
+- Incentivize longer-term contracts.
+- Promote value-added services (security, tech support) to reduce churn risk.
 
-Best model: Logistic Regression (AUC = 0.84, F1 = 0.63, Accuracy = 0.81).
-
-Balances interpretability with performance.
-
-🔍 Exploratory Data Analysis (EDA) — Key Insights
-
-Data Cleaning
-
-Found hidden nulls in TotalCharges (blank spaces not detected by .isnull()).
-
-Converted to float & imputed → ensured valid numerical analysis.
-
-Churn Distribution
-
-73% stayed vs 27% churned → clear imbalance, later addressed with SMOTE.
-
-Continuous Features
-
-Churned customers: shorter tenure (~18 vs 38 months), lower total spend, but higher monthly charges.
-
-Non-normal distributions confirmed via KDE & Q-Q plots.
-
-Categorical Features
-
-Contract: Month-to-month customers churn far more than 1–2 year contracts.
-
-Payment Method: Electronic check customers churn disproportionately.
-
-Services: Lack of Online Security, Backup, or Tech Support = higher churn.
-
-Demographics: Senior citizens, no partner, no dependents → higher churn risk.
-
-Interactions
-
-High monthly charges raise churn risk across all contract types.
-
-Customers with bundled services churn less → service stickiness effect.
-
-Business Takeaways
-
-Retention campaigns should target early-tenure, high-charge customers.
-
-Incentivize longer-term contracts.
-
-Promote value-added services (security, tech support) to reduce churn risk.
-
-📔 See full EDA notebook
+## 📔 See full EDA notebook
  for plots and detailed tests.
 
 📈 Modeling Workflow

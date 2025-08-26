@@ -38,10 +38,10 @@
 - Non-normal distributions confirmed via KDE & Q-Q plots.
 
 **Categorical Features**
-- Contract: Month-to-month customers churn far more than 1–2 year contracts.
-- Payment Method: Electronic check customers churn disproportionately.
-- Services: Lack of Online Security, Backup, or Tech Support = higher churn.
-- Demographics: Senior citizens, no partner, no dependents → higher churn risk.
+- **Contract:** Month-to-month customers churn far more than 1–2 year contracts.
+- **Payment Method:** Electronic check customers churn disproportionately.
+- **Services:** Lack of Online Security, Backup, or Tech Support = higher churn.
+- **Demographics:** Senior citizens, no partner, no dependents → higher churn risk.
 
 **Interactions**
 - High monthly charges raise churn risk across all contract types.
@@ -52,15 +52,15 @@
 - Incentivize longer-term contracts.
 - Promote value-added services (security, tech support) to reduce churn risk.
 
-*📔 See full EDA notebook for plots and detailed tests.*
+*📔  *See full [EDA notebook](Cmain/Churn%201.%20EDA.ipynb) for plots and detailed tests.*
 
 ## 📈 Modeling Workflow
-- Data Prep: Cleaned types, imputed missing, dropped irrelevant features.
-- Feature Engineering: Tenure buckets, service intensity, payment types, ratios.
-- Imbalance Handling: Applied SMOTE to training data only.
-- Baseline Model: Logistic Regression.
-- Model Comparison: Tuned & tested Random Forest, XGBoost, SVM, KNN, AdaBoost.
-- Evaluation Metrics: Accuracy, Precision, Recall, F1, ROC AUC.
+- **Data Prep:** Cleaned types, imputed missing, dropped irrelevant features.
+- **Feature Engineering:** Tenure buckets, service intensity, payment types, ratios.
+- **Imbalance Handling:** Applied SMOTE to training data only.
+- **Baseline Model:** Logistic Regression.
+- **Model Comparison:** Tuned & tested Random Forest, XGBoost, SVM, KNN, AdaBoost.
+- **Evaluation Metrics:** Accuracy, Precision, Recall, F1, ROC AUC.
 
 ## 📊 Results
 - Logistic Regression outperformed others with AUC 0.84.

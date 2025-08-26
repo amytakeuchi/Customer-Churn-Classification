@@ -26,7 +26,7 @@
 
 ## Exploratory Data Analysis (EDA) — Key Insights
 
-**Data Cleaning*
+**Data Cleaning**
 - Found hidden nulls in TotalCharges (blank spaces not detected by .isnull()).
 - Converted to float & imputed → ensured valid numerical analysis.
 
@@ -52,30 +52,20 @@
 - Incentivize longer-term contracts.
 - Promote value-added services (security, tech support) to reduce churn risk.
 
-## 📔 See full EDA notebook
- for plots and detailed tests.
+*📔 See full EDA notebook for plots and detailed tests.*
 
-📈 Modeling Workflow
+## 📈 Modeling Workflow
+- Data Prep: Cleaned types, imputed missing, dropped irrelevant features.
+- Feature Engineering: Tenure buckets, service intensity, payment types, ratios.
+- Imbalance Handling: Applied SMOTE to training data only.
+- Baseline Model: Logistic Regression.
+- Model Comparison: Tuned & tested Random Forest, XGBoost, SVM, KNN, AdaBoost.
+- Evaluation Metrics: Accuracy, Precision, Recall, F1, ROC AUC.
 
-Data Prep: Cleaned types, imputed missing, dropped irrelevant features.
-
-Feature Engineering: Tenure buckets, service intensity, payment types, ratios.
-
-Imbalance Handling: Applied SMOTE to training data only.
-
-Baseline Model: Logistic Regression.
-
-Model Comparison: Tuned & tested Random Forest, XGBoost, SVM, KNN, AdaBoost.
-
-Evaluation Metrics: Accuracy, Precision, Recall, F1, ROC AUC.
-
-📊 Results
-
-Logistic Regression outperformed others with AUC 0.84.
-
-Feature importance analysis (RF, XGBoost, AdaBoost) confirmed:
-
-Tenure, contract type, and bundled services drive churn prediction.
+## 📊 Results
+- Logistic Regression outperformed others with AUC 0.84.
+- Feature importance analysis (RF, XGBoost, AdaBoost) confirmed:
+- Tenure, contract type, and bundled services drive churn prediction.
 
 📂 Project Structure
 ├── notebooks/
@@ -88,10 +78,7 @@ Tenure, contract type, and bundled services drive churn prediction.
 │   └── roc_curves_all_models.png
 └── README.md
 
-🚀 Next Steps
-
-Deploy best model via FastAPI/Flask.
-
-Add drift monitoring & live churn predictions.
-
-Explore cost-sensitive learning to estimate financial impact of churn.
+## 🚀 Next Steps
+- Deploy best model via FastAPI/Flask.
+- Add drift monitoring & live churn predictions.
+- Explore cost-sensitive learning to estimate financial impact of churn.
